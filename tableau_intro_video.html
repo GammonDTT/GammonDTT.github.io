@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			body,
+			html {
+				background: black;
+				height: 100%;
+				margin: 0;
+				overflow: hidden;
+				padding: 0;
+				width: 100%;
+			}
+
+			img {
+				width: 100%;
+			}
+
+			video {
+				height: 100%;
+				width: 100%;
+			}
+
+			#logo,
+			#video {
+				height: 100%;
+				object-fit: contain;
+				width: 100%;
+			}
+
+			#logo {
+				align-items: center;
+				background: black;
+				display: flex;
+				justify-content: center;
+				left: 0;
+				opacity: 0;
+				pointer-events: none;
+				position: fixed;
+				top: 0;
+				transition: opacity .6s;
+			}
+
+			#logo.visible {
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="video">
+			<video src="videos/intro.mp4"></video>
+		</div>
+		<div id="logo">
+			<img src="images/Gammon_logo.png">
+		</div>
+		<script>
+			const logo=document.querySelector('#logo'), video=document.querySelector('video');
+
+			video.addEventListener('ended', e=>{
+				logo.classList.add('visible');
+			});
+
+			video.play().then(_=>{
+			}).catch(e=>{
+				if(e.name==='NotAllowedError'){
+					video.setAttribute('controls', 'controls');
+				}
+			});
+		</script>
+	</body>
+</html>
