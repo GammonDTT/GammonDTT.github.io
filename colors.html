@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+	<head>
+		<title>DTT Dashboard Colors</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<style>
+			body {
+				font-family: 'Roboto', sans-serif;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				user-select: none;
+				width: 100%;
+			}
+
+			html {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+
+			.color {
+				align-items: center;
+				cursor: pointer;
+				display: flex;
+				flex: 1;
+				flex-direction: column;
+				font-size: 2em;
+				height: 100%;
+				justify-content: center;
+				text-transform: uppercase;
+				width: 100%;
+			}
+
+			.color:hover .hint {
+				opacity: 1;
+			}
+
+			.color:hover .label {
+				opacity: 0;
+			}
+
+			.header {
+				display: flex;
+				justify-content: center;
+				position: relative;
+				width: 100%;
+			}
+
+			.hint,
+			.label {
+				font-size: 38.2%;
+				font-weight: bold;
+				transition: opacity .4s;
+			}
+
+			.hint {
+				letter-spacing: .2em;				
+				margin-left: .2em;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+			}
+
+			.label {
+				letter-spacing: .4em;				
+				margin-left: .4em;
+			}
+
+			.row {
+				align-items: center;
+				display: flex;
+				flex: 1;
+				justify-content: center;
+			}
+
+			.theme {
+				opacity: .5;
+				padding: 5px 7px 4px;
+			}
+
+			.theme:hover {
+				opacity: .7;
+			}
+
+			.theme.dark {
+				background: #000;
+				color: #fff;
+			}
+
+			.theme.light {
+				background: #fff;
+				color: #000;
+			}
+
+			.theme.selected {
+				opacity: 1;
+			}
+
+			[id^=table-] {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				width: 100%;
+			}
+
+			[id^=table-].hidden {
+				display: none;
+			}
+
+			#theme {
+				cursor: pointer;
+				display: flex;
+				left: 10px;
+				position: fixed;
+				top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="table-dark">
+			<div class="color" style="background:#202b30;color:#f2fff6">
+				<div class="header">
+					<div class="label">BACKGROUND</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#202b30</div>
+			</div>
+			<div class="color" style="background:#75c1ce;color:#202b30">
+				<div class="header">
+					<div class="label">FIRST</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#75c1ce</div>
+			</div>
+			<div class="color" style="background:#e6f4b7;color:#202b30">
+				<div class="header">
+					<div class="label">ACCENT (POSITIVE)</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#e6f4b7</div>
+			</div>
+			<div class="color" style="background:#fd513b;color:#f2fff6">
+				<div class="header">
+					<div class="label">ACCENT (NEGATIVE)</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#fd513b</div>
+			</div>
+			<div class="color" style="background:#f2fff6;color:#202b30">
+				<div class="header">
+					<div class="label">FORTH</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#f2fff6</div>
+			</div>
+			<div class="color" style="background:#50717a;color:#f2fff6">
+				<div class="header">
+					<div class="label">FIFTH</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#50717a</div>
+			</div>
+			<div class="color" style="background:#b1ede3;color:#202b30">
+				<div class="header">
+					<div class="label">SIXTH</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#b1ede3</div>
+			</div>
+			<div class="color" style="background:#52aab8;color:#202b30">
+				<div class="header">
+					<div class="label">SEVENTH</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#52aab8</div>
+			</div>
+		</div>
+		<div id="table-light" class="hidden">
+			<div class="color" style="background:#fff;color:#373540">
+				<div class="header">
+					<div class="label">BACKGROUND</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#ffffff</div>
+			</div>
+			<div class="color" style="background:#373540;color:#fff">
+				<div class="header">
+					<div class="label">FIRST</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#373540</div>
+			</div>
+			<div class="color" style="background:#488efe;color:#373540">
+				<div class="header">
+					<div class="label">ACCENT</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#488efe</div>
+			</div>
+			<div class="color" style="background:#18dda5;color:#373540">
+				<div class="header">
+					<div class="label">ACCENT (POSITIVE)</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#18dda5</div>
+			</div>
+			<div class="color" style="background:#b84847;color:#fff">
+				<div class="header">
+					<div class="label">ACCENT (NEGATIVE)</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#b84847</div>
+			</div>
+			<div class="color" style="background:#0ad4e2;color:#373540">
+				<div class="header">
+					<div class="label">FIFTH</div>
+					<div class="hint">CLICK TO COPY</div>
+				</div>
+				<div>#0ad4e2</div>
+			</div>
+		</div>
+		<div id="theme">
+			<div class="theme dark" theme="DARK">DARK</div>
+			<div class="theme light" theme="LIGHT">LIGHT</div>
+		</div>
+	</body>
+	<script>
+		const THEME={
+			DARK:	0,
+			LIGHT:	1
+		}
+		const colors=document.querySelectorAll('.color');
+		const themes=document.querySelectorAll('.theme');
+
+		function showTheme(theme){
+			document.querySelectorAll('[id^=table-]').forEach(table=>{
+				table.classList.add('hidden');
+			});
+			switch(theme){
+				case THEME.DARK:
+					document.querySelector('#table-dark').classList.remove('hidden');
+					location.hash='DARK';
+					break;
+				case THEME.LIGHT:
+					document.querySelector('#table-light').classList.remove('hidden');
+					location.hash='LIGHT';
+					break;
+			}
+			themes.forEach(theme=>{
+				theme.classList.remove('selected');
+			});
+			themes[theme].classList.add('selected');
+		}
+
+		colors.forEach(color=>{
+			color.addEventListener('click', e=>{
+				let txt=document.createElement('textarea');
+
+				txt.value=color.querySelector(':scope > :last-child').innerHTML.toUpperCase();
+				document.body.appendChild(txt);
+				txt.select();
+				document.execCommand('copy');
+				document.body.removeChild(txt);
+			});			
+		});
+
+		themes.forEach(theme=>{
+			theme.addEventListener('click', e=>{
+				showTheme(THEME[theme.getAttribute('theme')]);
+			});
+		});
+
+		switch(location.hash){
+			case '#LIGHT':
+				showTheme(THEME.LIGHT);
+				break;
+			case '#DARK':
+			default:
+				showTheme(THEME.DARK);
+		}
+	</script>
+</html>
